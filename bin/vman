@@ -8,4 +8,5 @@ elif ! man -w "$@" > /dev/null; then
   exit 1
 fi
 
-${EDITOR:-vim} -c "SuperMan $*"
+# coldeasy: The trailing _ is to avoid vim-workspace loading a session
+${EDITOR:-vim} -c "SuperMan $*" _$RANDOM
